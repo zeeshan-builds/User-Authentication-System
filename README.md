@@ -20,8 +20,7 @@ This project demonstrates basic concepts of:
 
 - View registered users
 - Delete current user account
-
-Data persistence using JSON
+- Data persistence using JSON
 
 # How It Works
 
@@ -29,35 +28,35 @@ The program loads user data from users.json.
 
 The user selects an option from the main menu:
 
-Sign Up
-
-Login
-
-Exit
+- Sign Up
+- Login
+- Exit
 
 After a successful login, the user enters a dashboard where they can:
 
-View all users
-
-Delete their account
-
-Logout
+- View all users
+- Delete their account
+- Logout
 
 Passwords are hashed before storage, so the actual password is never saved in plain text.
 
 # file Structure
 user-authentication-system/
+
 │
 ├── main.py
+
 ├── storage.py
+
 ├── users.json
+
 └── README.md
 
-main.py
+- main.py
 
 Controls the main program flow and menu system.
 
-storage.py
+- storage.py
 
 Contains the main logic of the system such as:
 
@@ -73,59 +72,54 @@ users.json
 
 Stores user data in JSON format.
 
-Example structure:
-[
-    {
-        "name": "zeeshan",
-        "password": "hashed_password_here"
-    }
-]
+
 # Installation:
 
 
-Clone the repository:
+- Clone the repository:
 
 git clone https://github.com/zeeshan-builds/user-authentication-system.git
 
-Move into the project folder:
+- Move into the project folder:
 
 cd user-authentication-system
 
-Run the program:
+- Run the program:
 
 python main.py
 
 # Known Bugs / Limitations
 
-The exit option prints a message but does not stop the program loop.
+- The exit option prints a message but does not stop the program loop.
 
-No protection against invalid menu input (non-numeric values may crash the program).
+- No protection against invalid menu input (non-numeric values may crash the program).
 
-Password hashing does not include salting.
+- Password hashing does not include salting.
 
-Any logged-in user can see all usernames.
+- Any logged-in user can see all usernames.
 
-Unlimited login attempts are allowed.
+- Unlimited login attempts are allowed.
 
 # Future Improvements
 
 Possible improvements for the project:
 
-Use bcrypt instead of SHA-256
+- Use bcrypt instead of SHA-256
+  
+- Hide password input using getpass
 
-Add password salting
+- Add proper input validation
 
-Hide password input using getpass
+- Store data in SQLite instead of JSON
 
-Add proper input validation
+- Add login attempt limits
 
-Store data in SQLite instead of JSON
-
-Add login attempt limits
-
-Implement user roles (admin / normal user)
+- Implement user roles (admin / normal user)
 
 # Author
 
 Zeeshan
 Software Engineering Student
+
+
+Contributions, suggestions, and improvements are always welcome.
